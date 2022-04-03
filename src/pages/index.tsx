@@ -1,5 +1,6 @@
 import { Banner } from 'components/Banner'
 import { Header } from 'components/Header'
+import { MediumCard } from 'components/MediumCard'
 import { SmallCard } from 'components/SmallCard'
 
 interface IProps {
@@ -8,9 +9,13 @@ interface IProps {
     location: string
     distance: string
   }[]
+  cardsData: {
+    img: string
+    title: string
+  }[]
 }
 
-export default function Home({ exploreData }: IProps) {
+export default function Home({ exploreData, cardsData }: IProps) {
   return (
     <div>
       <Header />
@@ -26,6 +31,16 @@ export default function Home({ exploreData }: IProps) {
             ))}
           </div>
         </section>
+
+        <section>
+          <h2 className="py-8 text-4xl font-semibold">Live anywhere</h2>
+
+          <div className="-ml-3 flex space-x-3  overflow-scroll p-3 scrollbar-hide">
+            {cardsData?.map((item) => (
+              <MediumCard key={item.img} data={item} />
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   )
@@ -36,9 +51,14 @@ export async function getStaticProps() {
     (res) => res.json()
   )
 
+  const cardsData = await fetch('https://links.papareact.com/zp1').then((res) =>
+    res.json()
+  )
+
   return {
     props: {
-      exploreData
+      exploreData,
+      cardsData
     }
   }
 }

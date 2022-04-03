@@ -9,6 +9,7 @@
   "ignorePatterns": ["*.config.js"],
   "rules": {
     "tailwindcss/classnames-order": "off",
+    "tailwindcss/no-custom-classname": "warn",
     "import/order": [
       "error",
       {
