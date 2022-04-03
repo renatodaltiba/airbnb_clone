@@ -1,9 +1,9 @@
-import { Story, Meta } from '@storybook/react'
-import SmallCard from '.'
+import { Meta, Story } from '@storybook/react'
+import { SmallCard, SmallCardProps } from '.'
 
 export default {
   title: 'SmallCard',
   component: SmallCard
 } as Meta
 
-export const Default: Story = () => <SmallCard />
+export const Default: Story<SmallCardProps> = (args) => <SmallCard {...args} />

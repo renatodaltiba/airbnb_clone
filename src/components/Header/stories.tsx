@@ -1,5 +1,5 @@
-import { Story, Meta } from '@storybook/react'
-import Header from '.'
+import { Meta, Story } from '@storybook/react'
+import { Header } from '.'
 
 export default {
   title: 'Header',

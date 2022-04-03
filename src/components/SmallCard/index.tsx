@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-interface IProps {
+export interface SmallCardProps {
   data: {
     img: string
     location: string
@@ -8,7 +8,7 @@ interface IProps {
   }
 }
 
-export function SmallCard({ data }: IProps) {
+export function SmallCard({ data }: SmallCardProps) {
   return (
     <div className="m-2 mt-5 flex cursor-pointer items-center space-x-4 rounded-xl transition duration-200 ease-out hover:scale-105 hover:bg-gray-100">
       <div className="relative h-16 w-16">

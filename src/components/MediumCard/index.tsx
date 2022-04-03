@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-interface Props {
+export interface MediumCardProps {
   data: {
     img: string
     title: string
   }
 }
 
-export function MediumCard({ data }: Props) {
+export function MediumCard({ data }: MediumCardProps) {
   return (
     <div className="cursor-pointer rounded-lg transition duration-300 ease-out hover:scale-105">
       <div className="relative h-80 w-80">

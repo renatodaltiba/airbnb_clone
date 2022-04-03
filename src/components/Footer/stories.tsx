@@ -1,5 +1,5 @@
-import { Story, Meta } from '@storybook/react'
-import Footer from '.'
+import { Meta, Story } from '@storybook/react'
+import { Footer } from '.'
 
 export default {
   title: 'Footer',
