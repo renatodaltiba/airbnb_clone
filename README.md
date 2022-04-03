@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Airbnb clone" title="Airbnb clone" src=".github/logo.png" width="400px" />
+  <img alt="Airbnb clone" title="Airbnb clone" src=".github/logo2.png" width="400px" />
 </p>
 
 <h3 align = "center" fontSize="60px">
